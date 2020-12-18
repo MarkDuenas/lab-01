@@ -1,6 +1,6 @@
 .a {
-  height: 100px;
-  width: 960px;
+  grid-column-start: 1;
+  grid-column-end: 6;
   border: 2px solid black;
   text-align: center;
   line-height: 100px;
@@ -9,49 +9,97 @@
 }
 
 .b {
-  width: 200px;
-  height: 600px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 5;
   border: 2px solid black;
   text-align: center;
   line-height: 600px;
-  float: left;
   background-color: #80ffd7;
 }
 
-.c,
-.d {
-  width: 380px;
-  height: 200px;
+.c {
+  grid-column-start: 2;
+  grid-column-end: 4;
   border: 2px solid black;
   text-align: center;
   line-height: 200px;
-  float: left;
   background-color: #00ffae;
+ 
+}
+.d {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 200px;
+  background-color: #00ffae;
+ 
 }
 
-.e,
+/* .e,
 .f,
 .g,
 .h {
-  width: 190px;
-  height: 250px;
   border: 2px solid black;
   text-align: center;
   line-height: 250px;
-  float: left;
+  background-color: #00ce8d;
+} */
+
+section {
+  grid-column-start: 2 ;
+  grid-column-end: 6 ;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.e {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 250px;
   background-color: #00ce8d;
 }
+.f {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 250px;
+  background-color: #00ce8d;
+}
+.g {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 250px;
+  background-color: #00ce8d;
+}
+.h {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 250px;
+  background-color: #00ce8d;
+}
+
 .i {
-  width: 760px;
-  height: 150px;
+  grid-column: 2/6 ;
   border: 2px solid black;
   text-align: center;
   line-height: 150px;
-  float: left;
   background-color: #018b60;
 }
 
-@media all and (max-width: 768px) {
+
+
+@media all and (max-width: 500px) {
   .a {
     width: 480px;
     height: 75px;
@@ -89,4 +137,14 @@
     line-height: 80px;
     background-color: #c0bd06;
   }
+  
+  section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media all and (max-width: 991px) {
+  
 }
